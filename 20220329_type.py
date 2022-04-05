@@ -53,3 +53,5 @@ print(0x10)   #10진수 10
 print(0xFF)   #16진수 FF : 255 소문자 가능
 
 #10진수 -> 2진수
+print(bin(10))  #Ob1010
+print(bin(9))
