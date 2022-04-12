@@ -52,6 +52,26 @@ print(0o10) #8진수 8
 print(0x10)   #10진수 10
 print(0xFF)   #16진수 FF : 255 소문자 가능
 
-#10진수 -> 2진수
+#10진수 -> 2진수, 8진수, 16진수
 print(bin(10))  #Ob1010
-print(bin(9))
+print(bin(9))   #0b1001
+print(oct(10))  #0o12
+print(hex(10))  #0xa
+
+#지수 표현
+print(f'지구의 나이 : {4.543e9}살')   #e9 = 9승
+print(f'원자의 크기 : {1e-10}')      #type : float
+
+#복소수    허수 : image
+print(9+1J) #j, J 둘 다 가능하지만 j로 출력   괄호가 쳐진 이유 : 9+1j가 하나의 숫자이기 때문
+print(9+1J-5-4j)    #실수는 실수끼리 허수는 허수끼리 계산
+
+ys = 9+1j
+hj = 7-3j
+print(ys+hj)    #(16-2j)
+print(ys.real)  #9.0
+print(hj.imag)  #-3.0
+print(hj.conjugate()) #켤레복소수
+print(hj * hj.conjugate())
+print(hj * hj.conjugate())  #(58+0j) = 49 + (3j x 3j) = 49 + 9 = 58 + 0j
+print(type(ys)) #<class 'complex'>
