@@ -73,3 +73,12 @@ print(ip_list_str)
 names_list_str = ' | '.join(names_list)
 print(names_list_str)
 print(", ".join(names_list))
+
+#format
+s = 'name : {}, number : {}, soccer : {}'
+print(s.format('손흥민', 7, True))
+s = 'name : {1}, number : {2}, soccer : {0}'
+print(s.format('손흥민', 7, True))
+s = 'name : {name}, number : {n}, soccer : {s}'
+print(s.format(name = '손흥민', s = True, n = 7))  #순서 바꾸기 가능
+#p46연습
