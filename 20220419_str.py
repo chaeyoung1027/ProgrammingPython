@@ -82,3 +82,4 @@ print(s.format('손흥민', 7, True))
 s = 'name : {name}, number : {n}, soccer : {s}'
 print(s.format(name = '손흥민', s = True, n = 7))  #순서 바꾸기 가능
 #p46연습
+
