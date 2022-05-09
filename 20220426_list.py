@@ -92,3 +92,5 @@ print(반3)
 print(두자리)
 #한자리 숫자 중 짝수인 숫자 출력
 print(list(range(8, 0, -2)))
+
+
