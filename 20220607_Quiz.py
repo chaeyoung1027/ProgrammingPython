@@ -34,3 +34,21 @@ g = majors[index-1]
 print(f'{student_number[0]}학년 {student_number[1]}반 {g} {int(student_number[2:])}번 ')
 
 print('-'*40)
+
+#3. N-Sum 10자리 숫자보다 작은 숫자를 넣으면 각자리의 숫자의 합계를 출력하기
+# print('숫자를 입력하세요 -> ', end='')
+num = 12345
+sum_val = 0
+#숫자 한자리씩 빼서 계산
+while num!=0:
+    sum_val += num%10
+    num = num// 10
+print(sum_val)
+
+#문자 한자리씩 빼서 계산
+num = 12345
+number_s = str(num)
+sum_val2 = 0
+for n in number_s:
+    sum_val2+=int(n)
+print(sum_val2)
