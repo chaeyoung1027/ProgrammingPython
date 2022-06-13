@@ -52,3 +52,10 @@ sum_val2 = 0
 for n in number_s:
     sum_val2+=int(n)
 print(sum_val2)
+
+print('-'*40)
+#4. 1~100까지 369 게임을 출력하자
+for i in range(1, 101, 1):
+    if i%10!=0 and i % 10 % 3 == 0: print('짝 ', end='')
+    else : print(i,' ', end='')
+    if i%10==0 : print()
