@@ -57,7 +57,7 @@ print('-'*20)
 
 def my_print4(name, age, group = '아이브'):
     print(name +" : "+str(age)+'살입니다.',group,'소속입니다.')# 이름: 살입니다.
-    print(name,':', age, '살입니다.')#이름 :  20 살입니다.
+    print(name,':', age, '살입니다.')#이름 :  20 살입니다.ㅜ
     print(f'{name} : {age}살입니다. {group}소속입니다.')
 my_print4('안유진', age = 20, group = '아이즈원')#위치 인자는 무조건
 print('-'*20)
