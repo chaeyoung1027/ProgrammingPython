@@ -59,9 +59,9 @@ for number in range(1, 101, 1): #1~100
     number_s = str(number) # 숫자 x 글자
     #'3','6','9'를 세자 => count
     count = 0
-    for ch in number_s:
-        if ch == '3' or ch == '6' or ch == '9':
-            count+=1
+    count+=number_s.count('3')
+    count+=number_s.count('6')
+    count+=number_s.count('9')
 
     if count ==0:   # count==0: 숫자출력하자
         print(number)
