@@ -55,7 +55,15 @@ print(sum_val2)
 
 print('-'*40)
 #4. 1~100까지 369 게임을 출력하자
-for i in range(1, 101, 1):
-    if i%10!=0 and i % 10 % 3 == 0: print('짝 ', end='')
-    else : print(i,' ', end='')
-    if i%10==0 : print()
+for number in range(1, 101, 1): #1~100
+    number_s = str(number) # 숫자 x 글자
+    #'3','6','9'를 세자 => count
+    count = 0
+    for ch in number_s:
+        if ch == '3' or ch == '6' or ch == '9':
+            count+=1
+
+    if count ==0:   # count==0: 숫자출력하자
+        print(number)
+    else: # count!=0:count만큼 '짝' 출력하자
+        print('짝'*count)
