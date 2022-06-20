@@ -67,3 +67,16 @@ for number in range(1, 101, 1): #1~100
         print(number)
     else: # count!=0:count만큼 '짝' 출력하자
         print('짝'*count)
+
+#gugudan() : 구구단 2단 출력하자
+#gugudan(5) : 구구단 2단 출력하자
+
+def gugudan(n = 2):
+    for num in range(1, 9+1):
+        print(f'{n} X {num} = {n*num}')
+    print('-'*11)
+
+gugudan(5)
+gugudan()
+
+
