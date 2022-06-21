@@ -125,7 +125,7 @@ front, back = tel('010-8988-0515')
 print(f'앞 : {front}\t뒤 : {back}')
 print('-'*20)
 #min_max([3, 31, 1, 6, 5, -6])
-def min_max(리스트):
+def min_max(*리스트):
     if len(리스트)<0:
         return None;
     a = 리스트[0]
@@ -137,7 +137,7 @@ def min_max(리스트):
             b = i
     return a, b
 
-min_value, max_value = min_max([3, 31, 1, 6, 5, -6])
+min_value, max_value = min_max(3, 31, 1, 6, 5, -6)
 print(f'최소 : {min_value}\t최대 : {max_value}')
 #count, sum, min, max
 
