@@ -82,4 +82,63 @@ print('-'*20)
 # #    print(name +" : "+str(age)+'살입니다.',group,'소속입니다.')# 이름: 살입니다.
 # #    print(name,':', age, '살입니다.')#이름 :  20 살입니다.ㅜ
 # #    print(f'{name} : {age}살입니다. {group}소속입니다.')
-# print('-'*20)
+
+def say(name, msg = '안녕하세요', feeling = '♥'):
+    print(f'{name}, {msg}, {feeling}')
+say('인소리')
+say('채영', feeling='🤣')
+print('-'*20)
+
+def fn(a, b = []):
+    b.append(a)
+    print(b)
+fn(3)   #[3]
+fn(5)   #[5]X [3, 5]
+fn(10, [1]) #[1, 10]
+fn(7)   #[3, 5, 7]
+print('-'*20)
+
+say('현진', '미안행')
+#지금부터 20년 후의 내 나이를 리턴하자
+# def plus20(age):
+#      age+20
+#     # pass #지금 쓸 말이 기억이 안 나면 에러가 안 나도록 pass써두기
+# a = plus20(18)
+# print(a)    #None : plus20() reutrn 값이 없어서 None리턴 웬만하면 def안에 print하지말고 return
+
+def plus20_2(age):
+    return age+20
+a = plus20_2(18)
+print(a)
+print('-'*20)
+
+#전화번호 앞 자리(지역변호)와 맨 뒤 4자리 출력하자
+def tel(number):
+    index = number.find('-')
+    f = number[:index]
+    b = number[-4:]
+    return f, b #(f, b)
+# front = '010'
+# back = '5678'
+front, back = tel('010-8988-0515')
+
+print(f'앞 : {front}\t뒤 : {back}')
+print('-'*20)
+#min_max([3, 31, 1, 6, 5, -6])
+def min_max(리스트):
+    if len(리스트)<0:
+        return None;
+    a = 리스트[0]
+    b = 리스트[0]
+    for i in 리스트[1:]:   #리스트[1:] : 0번째는 비교하지 않아도 됨
+        if a>i:
+            a = i
+        elif b<i:
+            b = i
+    return a, b
+
+min_value, max_value = min_max([3, 31, 1, 6, 5, -6])
+print(f'최소 : {min_value}\t최대 : {max_value}')
+#count, sum, min, max
+
+
