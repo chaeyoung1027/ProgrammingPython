@@ -28,7 +28,7 @@ for key, value in pl.items():
 num_list = [-5, 127, -13, 9, -21, 100]
 for num in num_list:
     if num>0 :
-        print(num, end, ' ')
+        print(num, end= ' ')
 print()
 #짝수, 홀수
 num_list = [13, 8, 7, 55, 100, 2, 12, 10, 17]
