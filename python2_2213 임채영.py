@@ -1,5 +1,5 @@
 # 2213 임채영
-#1
+# 1
 def sum_odd(num):
     sum_val = 0
     for n in num:
