@@ -55,7 +55,7 @@ class Game:
     def __str__(self):#특수메소드 : 문자열표현
         return f'{self.title}{self.genre}'
 
-#class->object: 객체화화
+#class->object: 객체화
 예서게임 = Game('World of Warcraft')
 채영게임 = Game('마인크래프트')
 채영게임.genre = '샌드박스'
