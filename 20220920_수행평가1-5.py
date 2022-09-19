@@ -7,12 +7,10 @@ def fare_pc(minuates):
     #minuates을 10으로 나누자. 몫
     share = minuates//10
     #몫*1000 = 요금
-    fare = share* 10000
+    fare = share* 1000
     #minuate을 10으로 나눈 나머지가 있으면 +1000
     if minuates%10!=0:
         fare+=1000
     return fare
 
-fare_pc(60)
-fare_pc(10)
-fare_pc(102)
+print(fare_pc(30))
