@@ -66,11 +66,11 @@ class Drink:
         self.set_sugar()
         self.set_ice()
 
-
-
-음료1 = Drink("아메리카노", 1800)
-음료1.set_cup_size()
-음료1.set_sugar()
-음료1.set_ice()
-print(음료1)
+# import한 coffee 파일을 실행했을 땐 이 문장들이 실행이 안되고 drink 파일을 실행했을 때만 실행되게 함
+if __name__ == '__main__':
+    음료1 = Drink("아메리카노", 1800)
+    음료1.set_cup_size()
+    음료1.set_sugar()
+    음료1.set_ice()
+    print(음료1)
 
