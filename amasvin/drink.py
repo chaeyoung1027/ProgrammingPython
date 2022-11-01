@@ -40,11 +40,15 @@ class Drink:
             self.price+=500
 
     def set_sugar(self):
+        #옵션 보여주자 1. 30%, 2. 50%, ...
         for index, sugar_label in enumerate(Drink._SUGARS):
             print(f'{index+1}.{sugar_label}')
+        #사용자 입력받자
         sugar = input('당도를 선택하세요 : ')
+        #그냥 엔터면, 기본값 2
         if sugar == '':
             self.sugar = 1
+        #숫자 입력하면, -1 -> index 바꿔주자
         else:
             self.sugar = int(sugar)-1
 
@@ -56,6 +60,12 @@ class Drink:
             self.ice = 1
         else:
             self.ice = int(ice)-1
+
+    def order(self):
+        self.set_cup_size()
+        self.set_sugar()
+        self.set_ice()
+
 
 
 음료1 = Drink("아메리카노", 1800)
