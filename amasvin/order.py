@@ -13,7 +13,10 @@ class Order:
     def __str__(self):
         # self.order_menu에서 drnk 하나씩 꺼내서 출력
         # 총 주문 금액 출력
-        return '\n'.join(str(drink) for drink in self.order_menu)
+        total_price = 0
+        for drink in self.order_menu:
+            total_price += drink.price
+        return '\n'.join(str(drink) for drink in self.order_menu) + f'\n총 주문 금액은 {total_price}원입니다.'
 
     # 메뉴판 초기화
     def init_menu(self):
@@ -37,11 +40,14 @@ class Order:
             new_drink = copy(self.menu[int(choice) - 1])
             # 메뉴 그대로 가져오면, 옵션에 따라 메뉴가 바뀌어 있음
             # 메뉴는 기본으로 놔두고, 복사해와서 그것의 옵션을 바꾸자
-            new_drink.order()
-            print(new_drink)
+            new_drink.order()   #음료주문(옵션)
+            #print(new_drink)
             # 주문한 음료수 리스트에 새로운 음료수 추가
             self.order_menu.append(new_drink)
         # 주문한 음료수 리스트 출력
+        print("-"*80)
+        print("주문하신 음료수는 다음과 같습니다.")
+        print(self) # __str__ 출력
 
     def show_menu(self):
         for index, drink in enumerate(self.menu):
@@ -51,4 +57,3 @@ class Order:
 if __name__ == '__main__':
     order = Order()
     order.order()
-    print(order)
